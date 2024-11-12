@@ -1,0 +1,319 @@
+/*Sidebar*/
+
+.sidebar {
+    text-align: left;
+    float: left;
+    position: fixed;
+    padding-bottom: 80px;
+}
+div.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+div.sidebar li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+div.sidebar li a.active {
+    background-color: #04AA6D;
+    color: white;
+    width: 200px;
+}
+div.sidebar li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    width: 200px;
+}
+/* Panel Home */
+
+.panelhome {
+    padding: 5% 0;
+    text-align: center;
+    height: 500px;
+}
+.panelhome h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 300px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.panelhomediv {
+    background-image: url(../img/blood1.jpg);
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 250px 100px 250px 100px;
+}
+/*Update Information*/
+
+.updateinfo h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 300px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.updateinfo form {
+    margin-top: 60px;
+    margin: 60px 330px 0 0;
+    float: right;
+    width: 50%;
+}
+.updateinfo select {
+    width: 100%;
+    padding: 5% 1%;
+    border: 1px solid #eb2c29;
+    border-radius: 5px;
+    text-align: center;
+    color: #999;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
+    background-position: right 20px top 50%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+.updateinfo input {
+    width: 100%;
+    padding: 5% 1%;
+    border: 1px solid #eb2c29;
+    border-radius: 5px;
+    text-align: center;
+    color: #333333;
+}
+.updateinfo input::placeholder {
+    color: #333333;
+    text-align: center;
+}
+.updateinfo button {
+    width: 95%;
+    padding: 3% 0%;
+    margin-bottom: 5%;
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.updateinfo button:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}
+* {
+    box-sizing: border-box;
+}
+.blood_group, .district, .gender, .fname, .lastname, .email, .mobile, .age {
+    float: left;
+    width: 50%;
+    padding: 2%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Blood Request*/
+
+.blood_request h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 400px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.blood_request form {
+    margin-top: 60px;
+    float: right;
+    width: 100%;
+}
+.blood_request label {
+    color: black;
+}
+.b_group select, .num_bags select, input[type="date"] {
+    width: 25%;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: 1px solid #eb2c29;
+    ;
+    border-radius: 5px;
+    color: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
+    background-position: right 20px top 50%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+.blood_request input[type="text"], textarea {
+    width: 25%;
+    padding: 15px 0px;
+    line-height: 35px;
+    margin: 5px 0;
+    border: 1px solid #eb2c29;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+}
+.blood_request button[type="submit"] {
+    width: 10%;
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    padding: 16px;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.blood_request button[type="submit"]:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}
+/* Next Donation Date */
+
+.donate_date h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 400px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.donate_date form {
+    margin-top: 60px;
+    float: right;
+    width: 100%;
+}
+.donate_date button {
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    border: none;
+    padding: 10px 20px;
+    ;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.donate_date button:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}
+/* Update Password */
+
+.updatepwd h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 400px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.updatepwd form {
+    margin-top: 60px;
+    float: right;
+    width: 100%;
+}
+.updatepwd button {
+    width: 12%;
+    padding: 10px 10px;
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.updatepwd button:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}
+/* Delete Account */
+
+.deleteacc h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 400px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.deleteacc form {
+    padding: 5%;
+}
+.password {
+    width: 20%;
+    padding: 15px 10px;
+    border: 1px solid #eb2c29;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+.password::placeholder {
+    color: #333333;
+}
+.checkbox {
+    margin-bottom: 20px;
+}
+.deleteacc label {
+    color: black;
+}
+.deleteacc button {
+    width: 10%;
+    padding: 10px 10px;
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.deleteacc button:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}
+/*Join as donor verification*/
+
+.form_ver {
+    padding-top: 5%;
+}
+.verification h3 {
+    width: 100%;
+    color: white;
+    background-color: #eb2c29;
+    padding: 9.8px 300px 2px 0;
+    margin: 0 0 0 13.1%;
+    position: fixed;
+}
+.form_ver span {
+    color: #333333;
+}
+.form_ver form {
+    padding-top: 20px;
+    color: #333333;
+}
+.form_ver label {
+    color: #333333;
+    font-size: 15px;
+}
+.form_ver input[type="submit"] {
+    background-image: linear-gradient(to right, #f22261, #f25c22);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.form_ver input[type="submit"]:hover {
+    background-image: linear-gradient(to left, #f22261, #f25c22);
+    cursor: pointer;
+}

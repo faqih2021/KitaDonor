@@ -1,0 +1,199 @@
+/* About */
+
+.about h1, .about p{
+    padding: 2% 50% 2% 10%;
+    color: #333333;
+    line-height: 30px;
+}
+
+.about{
+    background-color: #fbfbfb;
+    padding: 100px 0;
+    text-align: justify;
+}
+
+.search{
+    padding:10% 10% 0 10%;
+}
+
+
+/* Search */
+
+.search h1{
+    text-align: center;
+    color: #333333;
+}
+
+.search label{
+    color:#333333;
+}
+
+.search select {
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    border-color: #eb2c29;
+    color: #333333;
+    cursor: pointer;
+    
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
+    background-position: right 20px top 50% ;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+.search button[type=search] {
+    width: 14%;
+    background-color: #eb2c29;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    margin: 75px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search .column {
+    float: left;
+    width: 25%;
+    padding: 47.5px;
+}
+
+
+/* Result */
+
+.donor_count{
+    margin: 0 17.1% 2% 13.2%;
+    padding: 10px;
+    background-color: #eb2c29;
+    border: none;
+    border-radius: 5px;
+}
+
+.donors table{
+    
+    margin: 0 10.2% 2% 14.5%;
+    border-collapse: collapse;
+
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+/*
+span{
+     color: #333333;
+    padding-left:10px;
+}
+*/
+
+
+.label, .value{
+    color: #333333;
+    font-size: 15px;
+}
+.label{
+        padding-left:10px;
+}
+
+.donor_result{
+    margin: 0 15% 2% 10.2%;
+}
+
+.column-3 {
+    width: 33.33%;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.donor_contact{
+    width: 100px;
+    margin:10px 0 0 10px;
+    background-color: #eb2c29;
+    padding: 5px 5px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Form */
+
+.contact_form{
+    padding: 10% 0 5% 15%;
+}
+
+.contact_form h1 {
+    color: black;
+    padding-bottom: 10px;
+}
+
+
+.contact_form input{
+    width: 40%;
+    line-height:35px;
+    margin: 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+}
+
+.contact_form input::placeholder{
+    padding: 20px 20px;
+    color: black;
+}
+
+.contact_form textarea{
+    width: 40%;
+    height: 150px;
+    margin: 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    
+}
+
+.contact_form textarea::placeholder{
+    padding: 10px 20px;
+    color: black;
+    
+}
+
+.send_message{
+    background-color:#eb2c29;
+    width: 12%;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.emergency{
+    background-color: #fbfbfb;
+    padding: 100px 0;
+    text-align: justify;
+}
+
+.emergency h1{
+    padding: 2% 50% 0.5% 10%;
+    color: #333333;
+}
+
+.emergency  a{
+    line-height: 30px;
+    color: black;
+    padding: 0% 50% 2% 10%;
+    
+}

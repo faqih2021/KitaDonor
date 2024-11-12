@@ -1,0 +1,19 @@
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        color: black;
+    }
+    td a{
+        color: black;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    .blood_request{
+        padding-left: 15%;
+        padding-top:5% ;
+    }
