@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:8.1-apache
+    ports:
+      - "8085:80"
+    volumes:
+      - ./:/var/www/html/
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root_password
+      MYSQL_DB: rokto_db
+    command: >
+      bash -c "
+        docker-php-ext-install mysqli &&
+        docker-php-ext-enable mysqli &&
+        apache2-foreground
+      "
+  
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "33065:3306"
+    volumes:
+      - devphp-mysql-data:/var/lib/mysql
+      - ./rokto_db.sql:/docker-entrypoint-initdb.d/rokto_db.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: rokto_db
+
+volumes:
+  devphp-mysql-data:

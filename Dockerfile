@@ -1,27 +1,16 @@
-# Menggunakan image PHP-FPM sebagai dasar
-FROM php:8.0-fpm
+FROM php:8.1-apache
 
-# Install NGINX
-RUN apt-get update && \
-    apt-get install -y nginx && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Install mysqli extension
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
-# Salin konfigurasi NGINX yang sudah dikustomisasi
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Optional: Install pdo_mysql for PDO support
+RUN docker-php-ext-install pdo_mysql && docker-php-ext-enable pdo_mysql
 
-# Salin folder "kitadonor" ke dalam folder HTML NGINX
-COPY kitadonor /usr/share/nginx/html/kitadonor
+# Copy project files to container
+COPY . /var/www/html
 
-# Atur working directory ke /usr/share/nginx/html/kitadonor
-WORKDIR /usr/share/nginx/html/kitadonor
+# Set correct permissions
+RUN chown -R www-data:www-data /var/www/html
 
-# Beri izin pada folder agar dapat diakses
-RUN chown -R www-data:www-data /usr/share/nginx/html/kitadonor && \
-    chmod -R 755 /usr/share/nginx/html/kitadonor
-
-# Expose port 80 untuk NGINX
+# Expose port
 EXPOSE 80
-
-# Perintah untuk menjalankan PHP-FPM dan NGINX secara bersamaan
-CMD ["sh", "-c", "service nginx start && php-fpm"]
