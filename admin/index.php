@@ -15,7 +15,6 @@ if (!isset($_COOKIE['user'])) {
     $select   = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($select);
     $rows     = mysqli_fetch_array($select, MYSQLI_ASSOC);
-
 }
 if (isset($_COOKIE['user']) && $num_rows != 1) {
     header("location: login.php");
@@ -32,7 +31,7 @@ if (isset($_POST['logout'])) {
 <html>
 
 <head>
-    <title>Admin Dashboard | Rokto</title>
+    <title>Admin Dashboard | KitaDonor</title>
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
     <link rel="stylesheet" type="text/css" href="../css/oth.css">
     <link rel="stylesheet" type="text/css" href="../css/panelstyle.css">
@@ -41,48 +40,28 @@ if (isset($_POST['logout'])) {
 
 <body>
     <div class="topnav">
-        <li><a href="../index.php" class="navlogo">Rokto</a></li>
-        <li><a href="../index.php">Home</a></li>
-                <li><a href="../about-us.php">About Us</a></li>
-        <li><a href="../search-donors.php">Search Donors</a></li>
-        <li><a href="../emergency.php">Live Saving Contacts</a></li>
-<li><a href="login.php"><?php if (isset($_COOKIE['user'])) {echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
-    </form>";} else {echo "Login";}?></a></li>
-        <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li><a href="../index.php" class="navlogo">KitaDonor</a></li>
+        <li><a href="login.php" style="margin-left: 500px;"><?php if (isset($_COOKIE['user'])) {
+                                    echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button></form>";
+                                } else {
+                                    echo "Login";
+                                } ?></a></li>
     </div>
 
 
-<div class="panelhome">
-
-
-
-         <div class="sidebar">
+    <div class="panelhome">
+        <div class="sidebar">
             <ul>
-               <li><a href="index.php" class="active">Home</a></li>
-               <li><a href="editinfo.php">Update User Information</a></li>
-               <li><a href="requests.php">Blood Requests</a></li>
-               <li><a href="joiningVerification.php">Donor Verification</a></li>
-               <li><a href="updatepwd.php" >Change Password</a></li>
-               <li><a href="delete.php" >Delete Account</a></li>
+                <li><a href="index.php" class="active">Home</a></li>
+                <li><a href="updateuser.php">Update User Information</a></li>
+                <li><a href="requests.php">Blood Requests</a></li>
             </ul>
         </div>
 
-
-<h3>Admin Dashboard | Welcome <?php echo $rows['uname'] ?></h3>
-
-
-
-<div class="panelhomediv">
-
-
-
-</div>
-
-
-
-
-
-</div>
+        <h3>Admin Dashboard | Welcome <?php echo $rows['uname'] ?></h3>
+        <div class="panelhomediv">
+        </div>
+    </div>
 
     <div class="footer">
         <div class="elementor-shape" data-negative="false">
@@ -91,8 +70,8 @@ if (isset($_POST['logout'])) {
             </svg>
         </div>
         <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />

@@ -2,23 +2,22 @@
 include "../db-connect.php";
 
 if (isset($_POST['logout'])) {
-    //session_destroy();
-    setcookie("user", "", time() - 60 * 60 * 24, "/");
-    header("location:../index.php");
+   //session_destroy();
+   setcookie("user", "", time() - 60 * 60 * 24, "/");
+   header("location:../index.php");
 }
 
 if (!isset($_COOKIE['user'])) {
-    header("location: ../login.php");
+   header("location: ../login.php");
 } else {
-    $email    = $_COOKIE['user'];
-    $sql      = "SELECT * FROM users where email=\"$email\"";
-    $select   = mysqli_query($conn, $sql);
-    $num_rows = mysqli_num_rows($select);
-    $rows     = mysqli_fetch_array($select, MYSQLI_ASSOC);
-
+   $email    = $_COOKIE['user'];
+   $sql      = "SELECT * FROM users where email=\"$email\"";
+   $select   = mysqli_query($conn, $sql);
+   $num_rows = mysqli_num_rows($select);
+   $rows     = mysqli_fetch_array($select, MYSQLI_ASSOC);
 }
 if (isset($_COOKIE['user']) && $num_rows != 1) {
-    header("location: ../login.php");
+   header("location: ../login.php");
 }
 
 ?>
@@ -27,55 +26,53 @@ if (isset($_COOKIE['user']) && $num_rows != 1) {
 
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Account Dashboard | Rokto</title>
-      <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
-      <link rel="stylesheet" type="text/css" href="../css/oth.css">
-      <link rel="stylesheet" type="text/css" href="../css/panelstyle.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-   </head>
-   <body>
-      <div class="topnav">
-         <li><a href="../index.php" class="navlogo">Rokto</a></li>
-         <li><a href="../index.php">Home</a></li>
-                 <li><a href="../about-us.php">About Us</a></li>
-         <li><a href="../search-donors.php">Search Donors</a></li>
-         <li><a href="../emergency.php">Life Saving Contacts</a></li>
-<li><a href="login.php"><?php if (isset($_COOKIE['user'])) {echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
-    </form>";} else {echo "Login";}?></a></li>
-         <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-      </div>
-      <div class="panelhome" style="height: 500px;">
 
-         <div class="sidebar">
-            <ul>
-               <li><a href="home.php" >Home</a></li>
-               <li><a href="editinfo.php">Update Information</a></li>
-               <li><a href="request.php">Add Blood Request</a></li>
-               <li><a href="donation-date.php">Next Donation Date</a></li>
-               <li><a href="joiningVerification.php" class="active">Join as a Donor</a></li>
-               <li><a href="updatepwd.php">Change Password</a></li>
-               <li><a href="delete.php" >Delete Account</a></li>
-            </ul>
-         </div>
+<head>
+   <title>Account Dashboard | KitaDonor</title>
+   <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+   <link rel="stylesheet" type="text/css" href="../css/oth.css">
+   <link rel="stylesheet" type="text/css" href="../css/panelstyle.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+   <div class="topnav">
+      <li><a href="../index.php" class="navlogo">KitaDonor</a></li>
+      <li><a href="login.php" style="margin-left: 500px;"><?php if (isset($_COOKIE['user'])) {echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
+         </form>";} else {echo "Login";}?></a></li>
+   </div>
+   <div class="panelhome" style="height: 500px;">
+
+      <div class="sidebar">
+         <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="editinfo.php">Update Information</a></li>
+            <li><a href="request.php">Add Blood Request</a></li>
+            <li><a href="donation-date.php">Next Donation Date</a></li>
+            <li><a href="joiningVerification.php" class="active">Join as a Donor</a></li>
+            <li><a href="updatepwd.php">Change Password</a></li>
+            <li><a href="delete.php">Delete Account</a></li>
+         </ul>
+      </div>
 
       <div class="verification">
-        <h3>Join As a Blood Donor</h3>
-        <div class="form_ver">
-        <form action="" method="post" enctype="multipart/form-data">
-  Select image to upload <br>
-  <label for="nid_front">NID Front</label><br>
-  <input type="file" name="nid_front" id="nid_front" class="file" required><br>
-    <label for="nid_back">NID Back</label></form><br>
-  <input type="file" name="nid_back" id="nid_back" class="file" required><br>
-  <input type="checkbox" name="checkbox"> <span>I want to become a Donor</span><br>
+         <h3>Join As a Blood Donor</h3>
+         <div class="form_ver">
+            <form action="" method="post" enctype="multipart/form-data">
+               Select image to upload <br>
+               <label for="nid_front">NID Front</label><br>
+               <input type="file" name="nid_front" id="nid_front" class="file" required><br>
+               <label for="nid_back">NID Back</label>
+            </form><br>
+            <input type="file" name="nid_back" id="nid_back" class="file" required><br>
+            <input type="checkbox" name="checkbox"> <span>I want to become a Donor</span><br>
 
-  <input type="submit" value="Upload Image" name="submit">
-</form>
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
 
 
+         </div>
       </div>
-</div>
 
 
       <div class="footer">
@@ -85,8 +82,8 @@ if (isset($_COOKIE['user']) && $num_rows != 1) {
             </svg>
          </div>
          <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />
@@ -106,5 +103,6 @@ if (isset($_COOKIE['user']) && $num_rows != 1) {
             <br />
          </div>
       </div>
-   </body>
+</body>
+
 </html>

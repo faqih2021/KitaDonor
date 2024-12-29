@@ -12,7 +12,7 @@ if (isset($_POST['logout'])) {
 <html>
 
 <head>
-    <title>Rokto Blood Donors Society</title>
+    <title>Website Kita Donor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -20,36 +20,37 @@ if (isset($_POST['logout'])) {
 
 <body>
     <div class="topnav">
-        <li><a href="index.php" class="navlogo">Rokto</a></li>
-        <li><a href="#home">Home</a></li>
+        <div class="nav">
+        <li><a href="index.php" class="navlogo">KitaDonor</a></li>
+        <li><a href="#home" style="margin-left: 190px;">Home</a></li>
         <li><a href="#AboutUs">About Us</a></li>
         <li><a href="#SearchDonors">Search Donors</a></li>
-        <li><a href="emergency.php">Life Saving Contacts</a></li>
+        <!-- <li><a href="emergency.php">Life Saving Contacts</a></li> -->
 
-<?php if (!isset($_COOKIE['user'])) {
-    echo " <li><a href=\"login.php\">Login</a></li>";
-} else {
+        <?php if (!isset($_COOKIE['user'])) {
+            echo " <li><a href=\"login.php\">Login</a></li>";
+        } else {
 
-    echo "
-        <li><div class=\"dropdown\">
-    <button class=\"dropbtn\">Update
-      <i class=\"nav-arrow fa fa-angle-down\"></i>
-    </button>
-    <div class=\"dropdown-content\">
-      <a href=\"panel/home.php\">Dashboard</a>
-      <form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
-    </form></a>
-    </div>
-  </div> </li>";
-}
-?>
-        <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+            echo "
+                <li><div class=\"dropdown\">
+            <button class=\"dropbtn\">Update
+            <i class=\"nav-arrow fa fa-angle-down\"></i>
+            </button>
+            <div class=\"dropdown-content\">
+            <a href=\"panel/home.php\">Dashboard</a>
+            <form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
+            </form></a>
+            </div>
+        </div> </li>";
+        }
+        ?>
+        </div>
     </div>
     <div class="section2" id="home">
-        <h1>SMS-based platform to connect blood searchers with donors</h1>
-        <h3>Rokto is a real-time free platform to help blood searchers connect voluntary blood donors around Bangladesh.</h3>
-        <button class="btn1" onclick="window.location.href='register.php'">Join as Blood Donor</button>
-        <button class="btn2" onclick="window.location.href='#SearchDonors'">Search Blood Donors</button><br />
+        <h1>Platform untuk Menghubungkan Pencari dan Pendonor Darah</h1>
+        <h3>KitaDonor adalah aplikasi berbasis website yang memudahkan pencarian pendonor darah sekaligus pendaftaran sukarelawan pendonor secara real-time dan gratis.</h3>
+        <button class="btn1" onclick="window.location.href='register.php'">Daftar sebagai Pendonor</button>
+        <button class="btn2" onclick="window.location.href='#SearchDonors'">Cari Pendonor Darah</button><br />
     </div>
     <div id="SearchDonors" class="section3">
         <h1>Search Donors</h1>
@@ -73,14 +74,14 @@ if (isset($_POST['logout'])) {
                     <label for="district">District</label><br />
                     <select id="district" name="district" required>
                         <option value="0">Select</option>
-                        <option value="Dhaka">Dhaka</option>
-                        <option value="Chittagong">Chittagong</option>
-                        <option value="Sylhet">Sylhet</option>
-                        <option value="Barishal">Barishal</option>
-                        <option value="Bogra">Bogra</option>
-                        <option value="Comilla">Comilla</option>
-                        <option value="Shariatpur">Shariatpur</option>
-                        <option value="Madaripur">Madaripur</option>
+                        <option value="Dhaka">Surabaya</option>
+                        <option value="Chittagong">Sidoarjo</option>
+                        <option value="Sylhet">Malang</option>
+                        <option value="Barishal">Kediri</option>
+                        <option value="Bogra">Blitar</option>
+                        <option value="Comilla">Madiun</option>
+                        <option value="Shariatpur">Gresik</option>
+                        <option value="Madaripur">Trenggalek</option>
                     </select>
                 </div>
                 <div class="column">
@@ -116,7 +117,7 @@ if (isset($_POST['logout'])) {
     <div class="section5" id="AboutUs">
         <center>
             <h1>About Us</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS. Rokto is a not-for-profit initiative to aware people of voluntary blood donation in Bangladesh.</p>
+            <p>KitaDonor adalah platform berbasis website yang menghubungkan pencari darah dengan pendonor darah sukarela secara real-time. Kami hadir untuk mempermudah akses kebutuhan darah dan mendorong lebih banyak orang untuk menjadi sukarelawan pendonor darah. KitaDonor adalah inisiatif non-profit yang bertujuan meningkatkan kesadaran akan pentingnya donor darah sukarela di Indonesia.</p>
             <button onclick="window.location.href='about-us.php'">Learn More</button>
         </center>
     </div>
@@ -127,8 +128,8 @@ if (isset($_POST['logout'])) {
             </svg>
         </div>
         <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />

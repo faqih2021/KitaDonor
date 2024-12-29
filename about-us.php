@@ -2,9 +2,9 @@
 include "db-connect.php";
 
 if (isset($_POST['logout'])) {
-	//session_destroy();
-	setcookie("user", "", time() - 60 * 60 * 24, "/");
-	header("location:index.php");
+    //session_destroy();
+    setcookie("user", "", time() - 60 * 60 * 24, "/");
+    header("location:index.php");
 }
 
 ?>
@@ -12,7 +12,7 @@ if (isset($_POST['logout'])) {
 <html>
 
 <head>
-    <title>About Us | Rokto</title>
+    <title>About Us | KitaDonor</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <link rel="stylesheet" type="text/css" href="css/oth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -20,16 +20,15 @@ if (isset($_POST['logout'])) {
 
 <body>
     <div class="topnav">
-        <li><a href="index.php" class="navlogo">Rokto</a></li>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php" class="navlogo">KitaDonor</a></li>
+        <li><a href="index.php" style="margin-left: 190px;">Home</a></li>
         <li><a href="about-us.php">About Us</a></li>
         <li><a href="search-donors.php">Search Donors</a></li>
-        <li><a href="emergency.php">Life Saving Contacts</a></li>
-                <?php if (!isset($_COOKIE['user'])) {
-	echo " <li><a href=\"login.php\">Login</a></li>";
-} else {
+        <?php if (!isset($_COOKIE['user'])) {
+            echo " <li><a href=\"login.php\">Login</a></li>";
+        } else {
 
-	echo "
+            echo "
         <li><div class=\"dropdown\">
     <button class=\"dropbtn\">Update
       <i class=\"nav-arrow fa fa-angle-down\"></i>
@@ -40,14 +39,14 @@ if (isset($_POST['logout'])) {
     </form></a>
     </div>
   </div> </li>";
-}
-?>
-        <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        }
+        ?>
     </div>
     <div id="about" class="about">
-        <p>Rokto is an automated blood service that connect blood searchers with voluntary blood donors in a moment through SMS and website. Rokto is a free service for all. Rokto started its journey in 2018.</p>
-        <h1>Why Rokto?</h1>
-        <p>Though Bangladesh has more than 160 million people, the number of safe blood bank is very few. Without divisional towns, there is hardly any blood bank. But a huge amount of blood is needed for treatment purposes. A good number of accidents take place every day where blood needs essentially. As a result, people fall in real trouble to manage blood. But there are many blood donors who are interested in donating blood but don’t know who needs blood. The communication gap is resulting in the loss of many lives. <br> Rokto comes into the scenario to reduce or minimize the communication gap and connects people in a moment using the amazing power of SMS and email. As Rokto services can also be availed by SMS, people from any class of the society can easily avail of Rokto services.</p>
+        <p>KitaDonor adalah layanan berbasis website yang menghubungkan pencari darah dengan pendonor darah sukarela secara real-time. KitaDonor tersedia secara gratis untuk semua kalangan dan bertujuan mempermudah akses kebutuhan darah serta mendorong lebih banyak individu untuk menjadi pendonor. KitaDonor memulai perjalanannya untuk membantu masyarakat Indonesia dalam memenuhi kebutuhan darah dengan cepat dan efisien.</p>
+        <h1>Why KitaDonor?</h1>
+        <p>Di Indonesia, dengan populasi lebih dari 270 juta jiwa, kebutuhan akan darah sangat tinggi, tetapi ketersediaan bank darah yang aman masih terbatas, terutama di daerah terpencil. Setiap hari, banyak kecelakaan dan situasi darurat membutuhkan pasokan darah yang cepat. Namun, sering kali, pendonor yang bersedia tidak tahu siapa yang membutuhkan bantuan mereka. Kesenjangan komunikasi ini mengakibatkan hilangnya banyak nyawa yang seharusnya bisa diselamatkan.</p>
+        <p>KitaDonor hadir untuk mengurangi kesenjangan ini dengan memanfaatkan teknologi website yang memungkinkan pencari darah dan pendonor terhubung secara instan. Dengan layanan yang mudah diakses, KitaDonor memastikan bahwa siapa pun, di mana pun, dapat mendapatkan bantuan yang mereka butuhkan, kapan saja.</p>
     </div>
     <div class="footer">
         <div class="elementor-shape" data-negative="false">
@@ -56,8 +55,8 @@ if (isset($_POST['logout'])) {
             </svg>
         </div>
         <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />
