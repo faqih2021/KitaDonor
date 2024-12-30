@@ -32,7 +32,7 @@ if (isset($_POST['logout'])) {
 <html>
 
 <head>
-    <title>Account Dashboard | Rokto</title>
+    <title>Account Dashboard | KitaDonor</title>
     <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
     <link rel="stylesheet" type="text/css" href="../css/oth.css">
     <link rel="stylesheet" type="text/css" href="../css/panelstyle.css">
@@ -41,14 +41,9 @@ if (isset($_POST['logout'])) {
 
 <body>
     <div class="topnav">
-        <li><a href="../index.php" class="navlogo">Rokto</a></li>
-        <li><a href="../index.php">Home</a></li>
-                <li><a href="../about-us.php">About Us</a></li>
-        <li><a href="../search-donors.php">Search Donors</a></li>
-        <li><a href="../emergency.php">Life Saving Contacts</a></li>
-<li><a href="login.php"><?php if (isset($_COOKIE['user'])) {echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
-    </form>";} else {echo "Login";}?></a></li>
-        <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li><a href="../index.php" class="navlogo">KitaDonor</a></li>
+        <li><a href="login.php" style="margin-left: 500px;"><?php if (isset($_COOKIE['user'])) {echo "<form action=\"\" method=\"post\"> <button type=\"submit\" name=\"logout\" class=\"navbutton\">Logout</button>
+            </form>";} else {echo "Login";}?></a></li>
     </div>
 
 
@@ -92,8 +87,8 @@ if (isset($_POST['logout'])) {
             </svg>
         </div>
         <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />

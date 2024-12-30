@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 <html>
 
 <head>
-    <title>Login | Rokto</title>
+    <title>Login | KitaDonor</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <link rel="stylesheet" type="text/css" href="css/log.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -41,13 +41,10 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="topnav">
-        <li><a href="index.php" class="navlogo">Rokto</a></li>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php" class="navlogo">KitaDonor</a></li>
+        <li><a href="index.php" style="margin-left: 250px;">Home</a></li>
         <li><a href="about-us.php">About Us</a></li>
         <li><a href="search-donors.php">Search Donors</a></li>
-        <li><a href="emergency.php">Life Saving Contacts</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="" class="site-search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
     </div>
     <div class="loginf">
         <center>
@@ -70,8 +67,8 @@ if (isset($_POST['submit'])) {
             </svg>
         </div>
         <div class="column left">
-            <h1>Rokto</h1>
-            <p>Rokto is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
+            <h1>KitaDonor</h1>
+            <p>KitaDonor is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website.</p>
             <a href="#"><i aria-hidden="true" class="fa fa-facebook fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-twitter fa-2x"></i></a>
             <a href="#"><i aria-hidden="true" class="fa fa-linkedin fa-2x"></i></a><br />
